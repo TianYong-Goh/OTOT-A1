@@ -1,0 +1,10 @@
+version: "3.8"
+services:
+  nodeserver:
+    build: ./app
+  reverse-proxy:
+    restart: always
+    build: ./nginx
+    ports:
+      - 80:80
+  
